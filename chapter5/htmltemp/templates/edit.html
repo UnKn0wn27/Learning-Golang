@@ -1,0 +1,9 @@
+{{define "head"}} <title>Edit Notes</title>{{end}}
+{{define "body"}}
+<h1>Edit Note</h1>
+<form action="/notes/update/{{.Id}}" method="post">
+    <p>Title:<br> <input type="text" value="{{.Note.Title}}" name="title"></p>
+    <p>Description: <br> <textarea name="description" cols="50" rows="4">{{.Note.Description}}</textarea></p>
+    <p><input type="submit" value="submit"/></p>
+</form>
+{{end}}
